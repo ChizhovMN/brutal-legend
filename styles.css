@@ -1,0 +1,1028 @@
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 360px;
+    margin: 0;
+    background-image: url("./assets/brutal-legend1.jpg");
+    height: 100vh;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Metal Mania', cursive;
+}
+
+
+.header-wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    background: rgb(128, 128, 128, 0.5);
+    border-radius: 10px;
+}
+
+.main-wrapper {
+    display: grid;
+    justify-content: center;
+    grid-gap: 30px;
+    margin: 0 auto 0;
+    max-width: 300px;
+    background: rgb(128, 128, 128, 0.5);
+    padding: 25px 10px;
+    border-radius: 20px 150px 10px 70px/60px 15px 130px 23px;
+    border: 0px solid rgba(0, 0, 0, 0);
+}
+
+.buttons {
+    font-family: 'Metal Mania', cursive;
+    font-size: 24px;
+    font-weight: 600;
+    width: 300px;
+    height: 60px;
+    outline: none;
+    background: none;
+    background-color: black;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: white;
+    letter-spacing: 2px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 100px 30px 150px 20px/30px 100px 20px 150px;
+    line-height: 20px;
+
+}
+
+.buttons:hover {
+    background-color: rgba(165, 42, 42, 0.8);
+    box-shadow: 0 12px 16px 0 rgba(165, 42, 42, 0.3), 0 17px 50px 0 rgba(165, 42, 42, 0.24);
+    /* box-shadow: inset 1px 1px 10px -1px; */
+}
+
+.footer {
+    min-width: 300px;
+    background: black;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    max-width: 1024px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.github-wrapper {
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.github-link {
+    background-color: white;
+    border-radius: 50%;
+}
+
+.rsschool-link {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.year {
+    color: white;
+    font-size: 24px;
+}
+
+.link {
+    transition: all 0.5s;
+}
+
+.github-link:hover {
+    box-shadow: inset 1px 1px 10px -1px;
+}
+
+.rsschool-link:hover {
+    color: brown;
+}
+
+.github {
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./assets/icons/github.svg");
+}
+
+
+
+/* Second page */
+
+.start-page {
+    position: absolute;
+    background-image: url(./assets/start-game.jpg);
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    bottom: 68px;
+    left: 0;
+    right: 0;
+    transform: translate(-100%, 0);
+    transition: transform 1s ease-in-out;
+}
+
+.container {
+    position: relative;
+    background: rgb(128, 128, 128, 0.5);
+    border-radius: 10px;
+    max-width: 1024px;
+    margin: 20px auto 0px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.start-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.start-logo {
+    height: 100px;
+    background: none;
+}
+
+
+.score-wrapper {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    font-size: 32px;
+}
+
+.score-counter {
+    width: 35px;
+}
+
+.rock {
+    background-image: url(./assets/icons/rock.svg);
+    width: 80px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.start-lvls {
+    /* display: grid; */
+    /* grid-template-columns: repeat(5, 1fr); */
+    display: flex;
+    flex-wrap: wrap;
+    outline: none;
+    background: none;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    letter-spacing: 2px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+
+    border-radius: 100px 30px 150px 20px/30px 100px 20px 150px;
+}
+
+.start-lvl {
+    flex: auto;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: grey;
+    box-shadow: inset 1px 1px 10px -1px;
+    letter-spacing: -1px;
+    padding: 2px;
+}
+
+.start-lvl.active {
+    color: white;
+    box-shadow: green 1px 1px 10px -1px
+}
+
+.player-wrapper {
+    background: rgb(255, 255, 255, 0.8);
+    border: 0px solid rgba(255, 255, 255, 0.8);
+    border-radius: 100px 30px 150px 20px/30px 100px 20px 150px;
+    display: flex;
+    padding: 20px;
+    gap: 15px;
+}
+
+.player-btn,
+.volume-btn {
+    width: 32px;
+    height: 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.player-btn {
+    background-image: url("./assets/icons/play-button.svg");
+}
+
+.volume-btn {
+    background-image: url("./assets/icons/volumeOn.svg");
+}
+
+.pause {
+    background-image: url("./assets/icons/pause.svg")
+}
+
+.mute {
+    background-image: url("./assets/icons/mute.svg");
+}
+
+.song-logo {
+    width: 150px;
+    height: 150px;
+    background: rgba(128, 128, 128, 0.5);
+    border-radius: 10px;
+}
+
+.song {
+    font-size: 36px;
+    margin: 0;
+    line-height: 28px;
+}
+
+.audio-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 70%;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.audio-control,
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+
+.timeline-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.timeline {
+    width: 100%;
+}
+
+.table-item {
+    font-size: 24px;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.start-track,
+.end-track {
+    position: absolute;
+}
+
+.end-track {
+    right: 0;
+}
+
+.game-table {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px 0px;
+    background: rgb(255, 255, 255, 0.8);
+    border: 0px solid rgba(255, 255, 255, 0.8);
+    border-radius: 21px 30px 150px 4px/30px 100px 20px 150px;
+    padding: 15px;
+    gap: 5px;
+}
+
+
+
+.table-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.list-item {
+    position: relative;
+    list-style-type: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    padding-left: 20px;
+}
+
+.default::before {
+    content: "";
+    position: absolute;
+    background-image: url(./assets/icons/kulak.svg);
+    width: 50px;
+    height: 42px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -1px;
+    left: -16px;
+}
+
+.error::before {
+    content: "";
+    position: absolute;
+    background-image: url(./assets/icons/fuck.svg);
+    width: 50px;
+    height: 42px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -6px;
+    left: -19px;
+}
+
+.error {
+    text-decoration: line-through;
+}
+
+.right::before {
+    content: "";
+    position: absolute;
+    background-image: url(./assets/icons/hornes.svg);
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -7px;
+    left: -23px;
+}
+
+.right {
+    color: brown;
+}
+
+.next-btn:disabled {
+    box-shadow: inset 1px 1px 10px -1px;
+    color: grey;
+}
+
+.next-btn:disabled:hover {
+    background-color: black;
+    box-shadow: none;
+}
+
+.common-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.common-player {
+    background: none;
+    padding: 0;
+}
+
+.common-song {
+    margin: 0;
+    font-size: 20px;
+}
+
+.description {
+    width: 295px;
+    height: 80px;
+    line-height: 17px;
+    font-size: 20px;
+    margin-top: 5px;
+    overflow-y: scroll;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+.arrow {
+    width: 100px;
+    height: 60px;
+    background-image: url(./assets/icons/arrow.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.5s;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.cancel:hover,
+.arrow:hover {
+    box-shadow: inset 1px 1px 10px -1px;
+}
+
+
+.congratulations {
+    font-size: 36px;
+}
+
+.score {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.brutal {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 10px auto;
+}
+
+.accept-btn {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.restart-btn {
+    width: 100%;
+    margin: 0 auto;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.music {
+    position: absolute;
+    background-image: url('./assets/music.jpg');
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    bottom: 68px;
+    left: 0;
+    right: 0;
+    transform: translate(-100%, 0);
+    transition: transform 1s ease-in-out;
+}
+
+.music-background {
+    background: rgb(255, 255, 255, 0.8);
+    border: 0px solid rgba(255, 255, 255, 0.8);
+    border-radius: 100px 30px 150px 20px/30px 100px 20px 150px;
+    padding: 20px;
+}
+
+.music-container {
+    padding-bottom: 80px;
+    margin: auto;
+    transform: translate(0, 20%);
+}
+
+.music-player {
+    padding: 0px;
+    padding-bottom: 0px;
+    background: none;
+    border: none;
+    border-radius: none;
+}
+
+#music {
+    margin: 0 auto;
+    width: 100%;
+    gap: 15px;
+    align-items: center;
+}
+
+#music>.controls {
+    gap: 15px;
+    width: 100%;
+}
+
+.pro-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.music-description {
+    height: 120px;
+    width: 100%;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 24px;
+    line-height: 20px;
+    overflow-y: scroll;
+    margin: 10px 0 0 0;
+}
+
+.music-song {
+    text-align: center;
+}
+
+.ol-wrapper {
+    max-height: 343px;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.music-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0;
+    padding-left: 3rem;
+}
+
+.music-list>.list-item {
+    list-style-type: decimal;
+    padding: 0;
+    font-size: 24px;
+}
+
+.music-list>.list-item.default::before {
+    content: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -5px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: 1px solid #000000;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]::-ms-thumb {
+    border: 1px solid #000000;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: rgba(128, 128, 128, 0.5);
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: rgba(128, 128, 128, 0.7);
+    box-shadow: rgba(165, 42, 42, 0.7) 1px 1px 10px -1px;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: rgba(128, 128, 128, 0.5);
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: rgba(128, 128, 128, 0.5);
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 9em;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -5px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset 1px 1px 1px -1px;
+}
+
+.volume-line {
+    width: 40%;
+}
+
+.welcome-popUp {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    min-width: 360px;
+    width: 600px;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: rgb(255, 255, 255, 0.8);
+    border: 0px solid rgba(255, 255, 255, 0.8);
+    border-radius: 100px 30px 150px 20px/30px 100px 20px 150px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.welcome {
+    position: absolute;
+    top: 0;
+    bottom: 68px;
+    left: 0;
+    right: 0;
+    background-image: url("./assets/brutal-legend.jpg");
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 1s ease-in-out;
+}
+
+.cancel {
+    position: absolute;
+    background-image: url("./assets/icons/cancel.png");
+    height: 32px;
+    width: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+    transition: all 0.5s;
+}
+
+.welcome-header {
+    font-size: 48px;
+}
+
+.active {
+    color: brown;
+}
+
+.text {
+    font-size: 24px;
+    margin: 10px 0;
+    background: rgb(128, 128, 128, 0.5);
+    border-radius: 10px;
+    line-height: 21px;
+}
+
+.warning-text {
+    font-size: 20px;
+}
+
+.win-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 68px;
+    left: 0;
+    right: 0;
+    background-image: url(./assets/win.jpg);
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 1s ease-in-out;
+}
+
+.language-btn {
+    height: 40px;
+    width: auto;
+}
+
+.score-popUp {
+    justify-content: center;
+    gap: 20px;
+}
+
+.music-logo {
+    width: 150px;
+    height: 150px;
+}
+
+.hide {
+    transform: translate(0, -100%);
+}
+
+.show {
+    transform: translate(0, 0);
+}
+
+.song-arrow {
+    background-image: url('./assets/icons/songArrow.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    zoom: 1.5;
+    border: 1px solid;
+}
+
+
+
+#play3 {
+    padding: 7px;
+    border: 1px solid;
+    box-sizing: content-box;
+    background-origin: content-box;
+}
+
+#play3:hover {
+    box-shadow: inset 1px 1px 10px -1px;
+}
+
+#play3:active {
+    background-color: rgb(165, 42, 42, 0.5);
+    box-shadow: inset 1px 1px 10px -1px;
+}
+
+.song-arrow:hover {
+    box-shadow: inset 1px 1px 10px -1px;
+}
+
+.song-arrow:active {
+    background-color: rgb(165, 42, 42, 0.5);
+    box-shadow: inset 1px 1px 10px -1px;
+
+}
+
+.left-arrow {
+    transform: rotate(180deg);
+}
+
+.default::before {
+    width: 36px;
+    left: -12px;
+}
+
+.error::before {
+    width: 35px;
+    top: -5px;
+    left: -14px;
+}
+
+.right::before {
+    width: 42px;
+    top: -6px;
+    left: -17px;
+}
+
+@media (max-width:1024px) {
+
+    .container {
+        max-width: 780px;
+        padding: 10px;
+    }
+
+    .music-background {
+        padding-bottom: 10px;
+    }
+
+    .music-container {
+        padding-bottom: 70px;
+    }
+
+    .arrow {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .music-list>.list-item {
+        font-size: 24px;
+    }
+
+    .music-description {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:780px) {
+    .header-logo {
+        width: 640px;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .start-logo {
+        height: 50px;
+    }
+
+    .start-lvl {
+        font-size: 14px;
+    }
+
+    .song {
+        font-size: 20px;
+    }
+
+    .music-song {
+        font-size: 28px;
+    }
+
+
+
+    .song-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .music-logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .list-item {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:640px) {
+    .header-logo {
+        width: 440px;
+    }
+
+    .welcome-popUp {
+        width: 440px;
+    }
+
+    .player-wrapper {
+        padding: 10px;
+    }
+
+    .common-player {
+        padding: 0;
+    }
+
+    .container {
+        margin-top: 0;
+        height: 100%;
+    }
+
+    #music {
+        gap: 10px;
+    }
+
+    .music-container {
+        transform: translate(0, 0);
+    }
+
+    .music-player {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .ol-wrapper {
+        max-height: 200px;
+    }
+
+    .game-table {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .table-item {
+        width: 100%;
+    }
+
+    .table-list {
+        width: 100%;
+        font-size: 20px;
+        box-sizing: border-box;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .music-description {
+        font-size: 18px;
+        line-height: 16px;
+        height: 100px;
+    }
+
+    .next-btn {
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .music-logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .choose-song {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:440px) {
+    .header-logo {
+        width: 320px;
+    }
+
+    .welcome-header {
+        font-size: 32px;
+    }
+
+    .song {
+        font-size: 16px;
+    }
+
+    .music-song {
+        font-size: 24px;
+    }
+
+
+
+    .accept-btn {
+        width: auto;
+    }
+
+    .next-btn {
+        height: 50px;
+    }
+
+    .welcome-popUp {
+        width: 320px;
+    }
+
+    .next-btn {
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .congratulations {
+        font-size: 32px;
+    }
+
+    .list-item {
+        font-size: 16px;
+    }
+
+    .music-list>.list-item {
+        font-size: 18px;
+    }
+}
